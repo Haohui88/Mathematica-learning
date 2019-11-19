@@ -1,0 +1,252 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8902,        242]
+NotebookOptionsPosition[      6663,        200]
+NotebookOutlinePosition[      7007,        215]
+CellTagsIndexPosition[      6964,        212]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[{
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " Notes"
+}], "Title",
+ CellChangeTimes->{{3.663475793958352*^9, 3.6634758010379705`*^9}, {
+  3.697348967063146*^9, 3.697348975364591*^9}, {3.755819704313386*^9, 
+  3.755819704763857*^9}},ExpressionUUID->"c95db0de-05c4-4edd-b5a5-\
+48966c5052d9"],
+
+Cell["Others", "Subtitle",
+ CellChangeTimes->{
+  3.783144177298246*^9, 3.7831442633486576`*^9, {3.783144326177107*^9, 
+   3.783144327559016*^9}, {3.7831443693299313`*^9, 
+   3.783144369946966*^9}},ExpressionUUID->"9722775e-ae4d-4d20-9453-\
+9e4b6091b3de"],
+
+Cell["Dr. Liu Haohui", "Text",
+ CellChangeTimes->{{3.697349038252264*^9, 3.697349041079406*^9}, {
+  3.721085724634827*^9, 3.7210857254948254`*^9}, {3.783144169230703*^9, 
+  3.783144169731965*^9}},ExpressionUUID->"1021d0ac-86e6-40d3-a400-\
+6bc7437c4ec3"],
+
+Cell[CellGroupData[{
+
+Cell["Calling Python", "Section",
+ CellChangeTimes->{{3.7698174583317227`*^9, 
+  3.76981746686847*^9}},ExpressionUUID->"c4aafc92-51e6-46be-8562-\
+41d6f10aa5fb"],
+
+Cell[CellGroupData[{
+
+Cell["Register the evaluator", "Subsection",
+ CellChangeTimes->{{3.769817515701288*^9, 
+  3.7698175206534996`*^9}},ExpressionUUID->"817e6a97-2694-40e8-b777-\
+a35894bd8055"],
+
+Cell["\<\
+register the Python execution program (currently only support version 3.6) in \
+the environment you want: \
+\>", "Text",
+ CellChangeTimes->{{3.7698175262849073`*^9, 3.7698175566058607`*^9}, {
+  3.7698176049496684`*^9, 
+  3.769817617141196*^9}},ExpressionUUID->"0945dd47-7083-429b-9fb9-\
+01cb88e6cb90"],
+
+Cell[BoxData[
+ RowBox[{"RegisterExternalEvaluator", "[", 
+  RowBox[{
+  "\"\<Python\>\"", ",", 
+   "\"\<C:\\\\Users\\\\serlh\\\\AppData\\\\Local\\\\Continuum\\\\anaconda3\\\\\
+envs\\\\python36\\\\python.exe\>\""}], "]"}]], "Input",ExpressionUUID->\
+"e9bb33ff-bd8b-4f39-ba27-18dfb15c5cfc"],
+
+Cell["verify evaluator is registered correctly: ", "Text",
+ CellChangeTimes->{{3.7698175808143067`*^9, 
+  3.769817594941968*^9}},ExpressionUUID->"4d685c26-b5a3-42de-bfa3-\
+9467b13601b6"],
+
+Cell[BoxData[
+ RowBox[{"FindExternalEvaluators", "[", "\"\<Python\>\"", "]"}]], "Input",Expr\
+essionUUID->"0c519345-bc0e-4790-ae67-2847999f26ce"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Evaluate codes", "Subsection",
+ CellChangeTimes->{{3.7698175703107543`*^9, 
+  3.769817572140603*^9}},ExpressionUUID->"c5f909fd-70f0-4379-8f23-\
+6915ccf97fe3"],
+
+Cell[BoxData[
+ RowBox[{"ExternalEvaluate", "[", 
+  RowBox[{
+  "\"\<Python\>\"", ",", 
+   "\"\<\nimport pandas as pd\npd.date_range(start='2013-12-01', \
+end='2013-12-02', freq='1h')\n\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.7698171600146646`*^9, 3.7698172090535336`*^9}, {
+  3.769817251225398*^9, 3.769817251355775*^9}},
+ CellLabel->"In[49]:=",ExpressionUUID->"9b233c1f-f96a-45e3-ac3c-10603371fa14"],
+
+Cell["use > to an external code cell", "Text",
+ CellChangeTimes->{{3.7698176867506304`*^9, 
+  3.7698177138001895`*^9}},ExpressionUUID->"657473db-5f6c-4c4f-b204-\
+290dd068195b"],
+
+Cell["\<\
+import pandas as pd
+pd.date_range(start='2013-12-01', end='2013-12-02', freq='1h')\
+\>", "ExternalLanguage",
+ CellChangeTimes->{{3.7698177197239947`*^9, 3.769817727145819*^9}},
+ CellLabel->"In[53]:=",ExpressionUUID->"82d11c7b-6100-4e26-977a-057a87ac9225"],
+
+Cell["\<\
+start a session to do separate external evaluations in the same kernel \
+(console). \
+\>", "Text",
+ CellChangeTimes->{{3.769817428556879*^9, 
+  3.769817452140175*^9}},ExpressionUUID->"d6b2f236-bdd0-46a3-9a0d-\
+4dbcf31dd117"],
+
+Cell[BoxData[{
+ RowBox[{"session", "=", 
+  RowBox[{
+  "StartExternalSession", "[", "\"\<Python\>\"", 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"ExternalEvaluate", "[", 
+  RowBox[{"session", ",", "\"\<a=1\>\""}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"ExternalEvaluate", "[", 
+  RowBox[{"session", ",", "\"\<a+1\>\""}], "]"}]}], "Input",
+ CellChangeTimes->{{3.769817134706477*^9, 
+  3.7698171378919563`*^9}},ExpressionUUID->"1e9d867a-7890-4449-8d7b-\
+dbbd6e84fc7e"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Cloud deployment", "Section",
+ CellChangeTimes->{{3.782626858333959*^9, 
+  3.782626860601389*^9}},ExpressionUUID->"d7afb2bb-309d-4c7d-9996-\
+73277a390f4d"],
+
+Cell["\<\
+To publish a graph or other object, deploy it as a cloud object, then set its \
+permission as public, or make a public copy of it using CloudPublish. \
+\>", "Text",
+ CellChangeTimes->{{3.7826269330002403`*^9, 3.7826269654131255`*^9}, {
+  3.7826284491160307`*^9, 
+  3.782628457796961*^9}},ExpressionUUID->"e6d5e554-7a6e-4386-b6ff-\
+c2bd86345ba9"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"t", "=", 
+   RowBox[{"TabView", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"a", "->", 
+       RowBox[{"ListPlot", "[", 
+        RowBox[{"RandomReal", "[", 
+         RowBox[{"10", ",", "10"}], "]"}], "]"}]}], ",", 
+      RowBox[{"b", "->", 
+       RowBox[{"ListPlot", "[", 
+        RowBox[{"RandomReal", "[", 
+         RowBox[{"10", ",", "10"}], "]"}], "]"}]}]}], "}"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"obj", "=", 
+   RowBox[{"CloudDeploy", "[", "t", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SetPermissions", "[", 
+   RowBox[{"obj", ",", " ", "\"\<Public\>\""}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"pubObj", "=", 
+   RowBox[{"CloudPublish", "[", "obj", "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.782621946023019*^9, 3.7826219495127163`*^9}, {
+  3.782625064837294*^9, 3.7826251107865133`*^9}, {3.782625235358948*^9, 
+  3.7826252744523077`*^9}, {3.7826268782037573`*^9, 3.7826269139352355`*^9}, {
+  3.782628442844008*^9, 
+  3.782628444294794*^9}},ExpressionUUID->"f6a32e9c-5c49-475f-a3f4-\
+d95ef1e737d1"],
+
+Cell["To delete cloud objects: ", "Text",
+ CellChangeTimes->{{3.782626968943838*^9, 3.782626974811833*^9}, {
+  3.78262846654506*^9, 
+  3.7826284670893993`*^9}},ExpressionUUID->"4e4fe70d-5bf3-4431-9b6b-\
+ee44ad192c51"],
+
+Cell[BoxData[
+ RowBox[{"DeleteFile", "[", "pubObj", "]"}]], "Input",
+ CellChangeTimes->{{3.782626926042974*^9, 3.78262692714178*^9}, 
+   3.7826269789382315`*^9},ExpressionUUID->"db368ac5-2a69-4a3b-b7e9-\
+8cd17c582ad2"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{718, 808},
+WindowMargins->{{220, Automatic}, {994, Automatic}},
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 310, 8, 96, "Title",ExpressionUUID->"c95db0de-05c4-4edd-b5a5-48966c5052d9"],
+Cell[893, 32, 254, 5, 53, "Subtitle",ExpressionUUID->"9722775e-ae4d-4d20-9453-9e4b6091b3de"],
+Cell[1150, 39, 253, 4, 34, "Text",ExpressionUUID->"1021d0ac-86e6-40d3-a400-6bc7437c4ec3"],
+Cell[CellGroupData[{
+Cell[1428, 47, 160, 3, 67, "Section",ExpressionUUID->"c4aafc92-51e6-46be-8562-41d6f10aa5fb"],
+Cell[CellGroupData[{
+Cell[1613, 54, 172, 3, 53, "Subsection",ExpressionUUID->"817e6a97-2694-40e8-b777-a35894bd8055"],
+Cell[1788, 59, 311, 7, 56, "Text",ExpressionUUID->"0945dd47-7083-429b-9fb9-01cb88e6cb90"],
+Cell[2102, 68, 287, 6, 67, "Input",ExpressionUUID->"e9bb33ff-bd8b-4f39-ba27-18dfb15c5cfc"],
+Cell[2392, 76, 186, 3, 34, "Text",ExpressionUUID->"4d685c26-b5a3-42de-bfa3-9467b13601b6"],
+Cell[2581, 81, 145, 2, 28, "Input",ExpressionUUID->"0c519345-bc0e-4790-ae67-2847999f26ce"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2763, 88, 164, 3, 53, "Subsection",ExpressionUUID->"c5f909fd-70f0-4379-8f23-6915ccf97fe3"],
+Cell[2930, 93, 406, 8, 86, "Input",ExpressionUUID->"9b233c1f-f96a-45e3-ac3c-10603371fa14"],
+Cell[3339, 103, 176, 3, 34, "Text",ExpressionUUID->"657473db-5f6c-4c4f-b204-290dd068195b"],
+Cell[3518, 108, 265, 5, 63, "ExternalLanguage",ExpressionUUID->"82d11c7b-6100-4e26-977a-057a87ac9225"],
+Cell[3786, 115, 234, 6, 34, "Text",ExpressionUUID->"d6b2f236-bdd0-46a3-9a0d-4dbcf31dd117"],
+Cell[4023, 123, 470, 11, 67, "Input",ExpressionUUID->"1e9d867a-7890-4449-8d7b-dbbd6e84fc7e"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4542, 140, 161, 3, 67, "Section",ExpressionUUID->"d7afb2bb-309d-4c7d-9996-73277a390f4d"],
+Cell[4706, 145, 355, 7, 56, "Text",ExpressionUUID->"e6d5e554-7a6e-4386-b6ff-c2bd86345ba9"],
+Cell[5064, 154, 1130, 30, 86, "Input",ExpressionUUID->"f6a32e9c-5c49-475f-a3f4-d95ef1e737d1"],
+Cell[6197, 186, 217, 4, 34, "Text",ExpressionUUID->"4e4fe70d-5bf3-4431-9b6b-ee44ad192c51"],
+Cell[6417, 192, 218, 4, 28, "Input",ExpressionUUID->"db368ac5-2a69-4a3b-b7e9-8cd17c582ad2"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
