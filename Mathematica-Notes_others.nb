@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      8902,        242]
-NotebookOptionsPosition[      6663,        200]
-NotebookOutlinePosition[      7007,        215]
-CellTagsIndexPosition[      6964,        212]
+NotebookDataLength[     69640,       1393]
+NotebookOptionsPosition[     66849,       1342]
+NotebookOutlinePosition[     67193,       1357]
+CellTagsIndexPosition[     67150,       1354]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -101,18 +101,6 @@ end='2013-12-02', freq='1h')\n\>\""}], "]"}]], "Input",
   3.769817251225398*^9, 3.769817251355775*^9}},
  CellLabel->"In[49]:=",ExpressionUUID->"9b233c1f-f96a-45e3-ac3c-10603371fa14"],
 
-Cell["use > to an external code cell", "Text",
- CellChangeTimes->{{3.7698176867506304`*^9, 
-  3.7698177138001895`*^9}},ExpressionUUID->"657473db-5f6c-4c4f-b204-\
-290dd068195b"],
-
-Cell["\<\
-import pandas as pd
-pd.date_range(start='2013-12-01', end='2013-12-02', freq='1h')\
-\>", "ExternalLanguage",
- CellChangeTimes->{{3.7698177197239947`*^9, 3.769817727145819*^9}},
- CellLabel->"In[53]:=",ExpressionUUID->"82d11c7b-6100-4e26-977a-057a87ac9225"],
-
 Cell["\<\
 start a session to do separate external evaluations in the same kernel \
 (console). \
@@ -132,7 +120,1161 @@ Cell[BoxData[{
   RowBox[{"session", ",", "\"\<a+1\>\""}], "]"}]}], "Input",
  CellChangeTimes->{{3.769817134706477*^9, 
   3.7698171378919563`*^9}},ExpressionUUID->"1e9d867a-7890-4449-8d7b-\
-dbbd6e84fc7e"]
+dbbd6e84fc7e"],
+
+Cell["\<\
+use > to start an external code cell. The separate code cells belong to a \
+single session. \
+\>", "Text",
+ CellChangeTimes->{{3.7698176867506304`*^9, 3.7698177138001895`*^9}, {
+  3.787463876990296*^9, 
+  3.7874639044264064`*^9}},ExpressionUUID->"657473db-5f6c-4c4f-b204-\
+290dd068195b"],
+
+Cell["\<\
+import pandas as pd
+pd.date_range(start='2013-12-01', end='2013-12-02', freq='1h')\
+\>", "ExternalLanguage",
+ CellChangeTimes->{{3.7698177197239947`*^9, 3.769817727145819*^9}},
+ CellLabel->"In[53]:=",ExpressionUUID->"82d11c7b-6100-4e26-977a-057a87ac9225"],
+
+Cell["Can use a package as the external evaluator", "Text",
+ CellChangeTimes->{{3.7874639193822365`*^9, 
+  3.7874639323866262`*^9}},ExpressionUUID->"a8a0295e-8f2f-4c5a-810f-\
+399af4d5961f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"ExternalEvaluate", "[", 
+  RowBox[{"\"\<Python\>\"", ",", "\"\<numpy.multiply(3.0,3.0)\>\""}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"need", " ", "to", " ", "import", " ", "NumPy", " ", "first"}], 
+   " ", "*)"}]}]}], "Input",
+ CellChangeTimes->{{3.7874639857026234`*^9, 
+  3.787464009366547*^9}},ExpressionUUID->"6cbd0608-1398-4a7d-8050-\
+0169c11beeea"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["Failure",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    TemplateBox[{PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource[
+               "FEBitmaps", "SquarePlusIconMedium"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              Evaluator -> Automatic, Method -> "Preemptive"], 
+             Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                AbsoluteCurrentValue[Magnification]}]], 
+            FrameBox[
+             StyleBox["\"\[WarningSign]\"", 
+              Directive["Message", 35], StripOnInput -> False], 
+             ContentPadding -> False, FrameStyle -> None, 
+             FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+            GridBox[{{
+               TagBox[
+                GridBox[{{
+                   TagBox["\"Message: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["\"name 'numpy' is not defined\"", "SummaryItem"]}},
+                  GridBoxItemSize -> {"Columns" -> {6.5, All}}, 
+                 GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                 GridBoxSpacings -> {"Columns" -> {{0}}}], "SummaryItem"]}, {
+               TagBox[
+                GridBox[{{
+                   TagBox["\"Tag: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["\"PythonError\"", "SummaryItem"]}}, 
+                 GridBoxItemSize -> {"Columns" -> {6.5, All}}, 
+                 GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                 GridBoxSpacings -> {"Columns" -> {{0}}}], "SummaryItem"]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource[
+               "FEBitmaps", "SquareMinusIconMedium"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              Evaluator -> Automatic, Method -> "Preemptive"], 
+             Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                AbsoluteCurrentValue[Magnification]}]], 
+            FrameBox[
+             StyleBox["\"\[WarningSign]\"", 
+              Directive["Message", 35], StripOnInput -> False], 
+             ContentPadding -> False, FrameStyle -> None, 
+             FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+            GridBox[{{
+               TagBox[
+                GridBox[{{
+                   TagBox["\"Message: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["\"name 'numpy' is not defined\"", "SummaryItem"]}},
+                  GridBoxItemSize -> {"Columns" -> {6.5, All}}, 
+                 GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                 GridBoxSpacings -> {"Columns" -> {{0}}}], "SummaryItem"]}, {
+               TagBox[
+                GridBox[{{
+                   TagBox["\"Tag: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["\"PythonError\"", "SummaryItem"]}}, 
+                 GridBoxItemSize -> {"Columns" -> {6.5, All}}, 
+                 GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                 GridBoxSpacings -> {"Columns" -> {{0}}}], "SummaryItem"]}, {
+               RowBox[{
+                 TagBox[
+                  TemplateBox[{"\"FailureCode\"", "\": \""}, "RowDefault"], 
+                  "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                 TagBox[
+                  TagBox["\"NameError\"", HoldForm], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox[
+                  TemplateBox[{"\"Traceback\"", "\": \""}, "RowDefault"], 
+                  "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                 TagBox[
+                  TagBox[
+                   TagBox[
+                    DynamicModuleBox[{Typeset`var$$ = True}, 
+                    InterpretationBox[
+                    StyleBox[
+                    PaneSelectorBox[{False -> GridBox[{{
+                    OpenerBox[
+                    Dynamic[Typeset`var$$], Appearance -> Automatic, Enabled -> 
+                    Automatic, AutoAction -> False, ContinuousAction -> 
+                    False], 
+                    
+                    TemplateBox[{
+                    "\"NameError\"", "\" \"", 
+                    "\"name 'numpy' is not defined\""}, "RowDefault"]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}}, AutoDelete -> 
+                    False, GridBoxBackground -> {"Columns" -> {{Automatic}}}, 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {
+                    "Columns" -> {{0.2}}, "Rows" -> {{0.5}}}, 
+                    BaselinePosition -> {1, 1}], True -> GridBox[{{
+                    OpenerBox[
+                    Dynamic[Typeset`var$$], Appearance -> Automatic, Enabled -> 
+                    Automatic, AutoAction -> False, ContinuousAction -> 
+                    False], 
+                    
+                    TemplateBox[{
+                    "\"NameError\"", "\" \"", 
+                    "\"name 'numpy' is not defined\""}, "RowDefault"]}, {"", 
+                    PaneBox[
+                    StyleBox[
+                    TagBox[
+                    GridBox[{{
+                    TagBox[
+                    DynamicModuleBox[{Typeset`var$$ = False}, 
+                    InterpretationBox[
+                    StyleBox[
+                    PaneSelectorBox[{False -> GridBox[{{
+                    OpenerBox[
+                    Dynamic[Typeset`var$$], Appearance -> Automatic, Enabled -> 
+                    Automatic, AutoAction -> False, ContinuousAction -> 
+                    False], 
+                    TemplateBox[{
+                    ButtonBox[
+                    StyleBox[
+                    "\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\
+\\\\12.0\\\\SystemFiles\\\\Links\\\\WolframClientForPython\\\\wolframclient\\\
+\\language\\\\decorators.py\"", 
+                    RGBColor[0.25, 0.48, 1], Small, FontFamily -> "Courier", 
+                    StripOnInput -> False], ButtonFunction :> If[
+                    FileExistsQ[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\language\\decorators.py"], 
+                    SystemOpen[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\language\\decorators.py"]], Appearance -> "Frameless", 
+                    Evaluator -> Automatic, Method -> "Preemptive"], 
+                    "\" in \"", "\"safe_wl_execute\""}, "RowDefault"]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}}, AutoDelete -> 
+                    False, GridBoxBackground -> {"Columns" -> {{Automatic}}}, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {"Columns" -> {{0.2}}, 
+                    "Rows" -> {{0.5}}}, BaselinePosition -> {1, 1}], True -> 
+                    GridBox[{{
+                    OpenerBox[
+                    Dynamic[Typeset`var$$], Appearance -> Automatic, Enabled -> 
+                    Automatic, AutoAction -> False, ContinuousAction -> 
+                    False], 
+                    TemplateBox[{
+                    ButtonBox[
+                    StyleBox[
+                    "\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\
+\\\\12.0\\\\SystemFiles\\\\Links\\\\WolframClientForPython\\\\wolframclient\\\
+\\language\\\\decorators.py\"", 
+                    RGBColor[0.25, 0.48, 1], Small, FontFamily -> "Courier", 
+                    StripOnInput -> False], ButtonFunction :> If[
+                    FileExistsQ[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\language\\decorators.py"], 
+                    SystemOpen[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\language\\decorators.py"]], Appearance -> "Frameless", 
+                    Evaluator -> Automatic, Method -> "Preemptive"], 
+                    "\" in \"", "\"safe_wl_execute\""}, "RowDefault"]}, {"", 
+                    PaneBox[
+                    TagBox[
+                    GridBox[{{
+                    TagBox[
+                    
+                    GridBox[{{"\"  24.                      opts={},\""}, {
+                    "\"  25.                      export_opts={},\""}, {
+                    "\"  26.                      \
+exception_class=WolframLanguageException):\""}, {"\"  27.  \""}, {
+                    "\"  28.      __traceback_hidden_variables__ = True\""}, {
+                    "\"  29.  \""}, {"\"  30.      try:\""}, {
+                    ItemBox[
+                    "\"  31.          return export(function(*args, **opts), \
+**export_opts)\"", Background -> RGBColor[1, 1, 0.85], StripOnInput -> 
+                    False]}, {
+                    "\"  32.      except Exception as export_exception:\""}, {
+                    "\"  33.          try:\""}, {
+                    "\"  34.              try:\""}, {"\"  35.  \""}, {
+                    "\"  36.                  # The user can provide an \
+exception class, and it can be broken, in which case we are running \
+another\""}, {
+                    "\"  37.                  # try / except to return errors \
+that are happening during class serialization\""}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                    GridBoxBackground -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{
+                    GrayLevel[0.95], 
+                    GrayLevel[1]}}}, DefaultBaseStyle -> "Column", 
+                    GridBoxFrame -> {"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> 
+                    GrayLevel[0.85]}}, GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                    "Column"]}}, GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                    DefaultBaseStyle -> "Column", 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}], "Column"], ImageMargins -> 
+                    0]}}, GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                    AutoDelete -> False, GridBoxBackground -> {
+                    "Columns" -> {{Automatic}}}, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {"Columns" -> {{0.2}}, 
+                    "Rows" -> {{0.5}}}, BaselinePosition -> {1, 1}]}, 
+                    Dynamic[Typeset`var$$], Alignment -> Automatic, ImageSize -> 
+                    Automatic, ImageMargins -> 0, BaseStyle -> {}, 
+                    DefaultBaseStyle -> "OpenerView", BaselinePosition -> 
+                    Baseline], Deployed -> False, StripOnInput -> False], 
+                    OpenerView[{
+                    Row[{
+                    Button[
+                    Style[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\language\\decorators.py", 
+                    RGBColor[0.25, 0.48, 1], Small, FontFamily -> "Courier"], 
+                    If[
+                    FileExistsQ[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\language\\decorators.py"], 
+                    SystemOpen[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\language\\decorators.py"]], Appearance -> "Frameless"], " in ",
+                     "safe_wl_execute"}], 
+                    Column[{
+                    
+                    Column[{"  24.                      opts={},", 
+                    "  25.                      export_opts={},", 
+                    "  26.                      \
+exception_class=WolframLanguageException):", "  27.  ", 
+                    "  28.      __traceback_hidden_variables__ = True", 
+                    "  29.  ", "  30.      try:", 
+                    Item[
+                    "  31.          return export(function(*args, **opts), \
+**export_opts)", Background -> LightYellow], 
+                    "  32.      except Exception as export_exception:", 
+                    "  33.          try:", "  34.              try:", 
+                    "  35.  ", 
+                    "  36.                  # The user can provide an \
+exception class, and it can be broken, in which case we are running another", 
+                    "  37.                  # try / except to return errors \
+that are happening during class serialization"}, Background -> {{
+                    GrayLevel[0.95], 
+                    GrayLevel[1]}}, Frame -> LightGray]}]}, False]], 
+                    DynamicModuleValues -> Automatic], Setting[#, {0}]& ]}, {
+                    TagBox[
+                    DynamicModuleBox[{Typeset`var$$ = False}, 
+                    InterpretationBox[
+                    StyleBox[
+                    PaneSelectorBox[{False -> GridBox[{{
+                    OpenerBox[
+                    Dynamic[Typeset`var$$], Appearance -> Automatic, Enabled -> 
+                    Automatic, AutoAction -> False, ContinuousAction -> 
+                    False], 
+                    TemplateBox[{
+                    ButtonBox[
+                    StyleBox[
+                    "\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\
+\\\\12.0\\\\SystemFiles\\\\Links\\\\WolframClientForPython\\\\wolframclient\\\
+\\utils\\\\externalevaluate.py\"", 
+                    RGBColor[0.25, 0.48, 1], Small, FontFamily -> "Courier", 
+                    StripOnInput -> False], ButtonFunction :> If[
+                    FileExistsQ[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py"], 
+                    SystemOpen[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py"]], Appearance -> "Frameless", 
+                    Evaluator -> Automatic, Method -> "Preemptive"], 
+                    "\" in \"", "\"handle_message\""}, "RowDefault"]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}}, AutoDelete -> 
+                    False, GridBoxBackground -> {"Columns" -> {{Automatic}}}, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {"Columns" -> {{0.2}}, 
+                    "Rows" -> {{0.5}}}, BaselinePosition -> {1, 1}], True -> 
+                    GridBox[{{
+                    OpenerBox[
+                    Dynamic[Typeset`var$$], Appearance -> Automatic, Enabled -> 
+                    Automatic, AutoAction -> False, ContinuousAction -> 
+                    False], 
+                    TemplateBox[{
+                    ButtonBox[
+                    StyleBox[
+                    "\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\
+\\\\12.0\\\\SystemFiles\\\\Links\\\\WolframClientForPython\\\\wolframclient\\\
+\\utils\\\\externalevaluate.py\"", 
+                    RGBColor[0.25, 0.48, 1], Small, FontFamily -> "Courier", 
+                    StripOnInput -> False], ButtonFunction :> If[
+                    FileExistsQ[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py"], 
+                    SystemOpen[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py"]], Appearance -> "Frameless", 
+                    Evaluator -> Automatic, Method -> "Preemptive"], 
+                    "\" in \"", "\"handle_message\""}, "RowDefault"]}, {"", 
+                    PaneBox[
+                    TagBox[
+                    GridBox[{{
+                    TagBox[
+                    
+                    GridBox[{{"\" 169.  \""}, {
+                    "\" 170.  @to_wl(**EXPORT_KWARGS)\""}, {
+                    "\" 171.  def handle_message(socket, \
+context=UnprintableContext()):\""}, {"\" 172.  \""}, {
+                    "\" 173.      __traceback_hidden_variables__ = True\""}, {
+                    "\" 174.  \""}, {
+                    "\" 175.      message = binary_deserialize(socket.recv())\
+\""}, {
+                    ItemBox[
+                    "\" 176.      result = evaluate_message(context=context, \
+**message)\"", Background -> RGBColor[1, 1, 0.85], StripOnInput -> False]}, {
+                    "\" 177.  \""}, {"\" 178.      sys.stdout.flush()\""}, {
+                    "\" 179.      return result\""}, {"\" 180.  \""}, {
+                    "\" 181.  \""}, {
+                    "\" 182.  def start_zmq_instance(port=None, \
+write_to_stdout=True, **opts):\""}}, GridBoxAlignment -> {
+                    "Columns" -> {{Left}}}, GridBoxBackground -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{
+                    GrayLevel[0.95], 
+                    GrayLevel[1]}}}, DefaultBaseStyle -> "Column", 
+                    GridBoxFrame -> {"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> 
+                    GrayLevel[0.85]}}, GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                    "Column"]}}, GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                    DefaultBaseStyle -> "Column", 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}], "Column"], ImageMargins -> 
+                    0]}}, GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                    AutoDelete -> False, GridBoxBackground -> {
+                    "Columns" -> {{Automatic}}}, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {"Columns" -> {{0.2}}, 
+                    "Rows" -> {{0.5}}}, BaselinePosition -> {1, 1}]}, 
+                    Dynamic[Typeset`var$$], Alignment -> Automatic, ImageSize -> 
+                    Automatic, ImageMargins -> 0, BaseStyle -> {}, 
+                    DefaultBaseStyle -> "OpenerView", BaselinePosition -> 
+                    Baseline], Deployed -> False, StripOnInput -> False], 
+                    OpenerView[{
+                    Row[{
+                    Button[
+                    Style[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py", 
+                    RGBColor[0.25, 0.48, 1], Small, FontFamily -> "Courier"], 
+                    If[
+                    FileExistsQ[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py"], 
+                    SystemOpen[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py"]], Appearance -> "Frameless"], 
+                    " in ", "handle_message"}], 
+                    Column[{
+                    
+                    Column[{" 169.  ", " 170.  @to_wl(**EXPORT_KWARGS)", 
+                    " 171.  def handle_message(socket, \
+context=UnprintableContext()):", " 172.  ", 
+                    " 173.      __traceback_hidden_variables__ = True", 
+                    " 174.  ", 
+                    " 175.      message = binary_deserialize(socket.recv())", 
+                    Item[
+                    " 176.      result = evaluate_message(context=context, \
+**message)", Background -> LightYellow], " 177.  ", 
+                    " 178.      sys.stdout.flush()", 
+                    " 179.      return result", " 180.  ", " 181.  ", 
+                    " 182.  def start_zmq_instance(port=None, \
+write_to_stdout=True, **opts):"}, Background -> {{
+                    GrayLevel[0.95], 
+                    GrayLevel[1]}}, Frame -> LightGray]}]}, False]], 
+                    DynamicModuleValues -> Automatic], Setting[#, {0}]& ]}, {
+                    TagBox[
+                    DynamicModuleBox[{Typeset`var$$ = False}, 
+                    InterpretationBox[
+                    StyleBox[
+                    PaneSelectorBox[{False -> GridBox[{{
+                    OpenerBox[
+                    Dynamic[Typeset`var$$], Appearance -> Automatic, Enabled -> 
+                    Automatic, AutoAction -> False, ContinuousAction -> 
+                    False], 
+                    TemplateBox[{
+                    ButtonBox[
+                    StyleBox[
+                    "\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\
+\\\\12.0\\\\SystemFiles\\\\Links\\\\WolframClientForPython\\\\wolframclient\\\
+\\utils\\\\externalevaluate.py\"", 
+                    RGBColor[0.25, 0.48, 1], Small, FontFamily -> "Courier", 
+                    StripOnInput -> False], ButtonFunction :> If[
+                    FileExistsQ[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py"], 
+                    SystemOpen[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py"]], Appearance -> "Frameless", 
+                    Evaluator -> Automatic, Method -> "Preemptive"], 
+                    "\" in \"", "\"evaluate_message\""}, "RowDefault"]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}}, AutoDelete -> 
+                    False, GridBoxBackground -> {"Columns" -> {{Automatic}}}, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {"Columns" -> {{0.2}}, 
+                    "Rows" -> {{0.5}}}, BaselinePosition -> {1, 1}], True -> 
+                    GridBox[{{
+                    OpenerBox[
+                    Dynamic[Typeset`var$$], Appearance -> Automatic, Enabled -> 
+                    Automatic, AutoAction -> False, ContinuousAction -> 
+                    False], 
+                    TemplateBox[{
+                    ButtonBox[
+                    StyleBox[
+                    "\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\
+\\\\12.0\\\\SystemFiles\\\\Links\\\\WolframClientForPython\\\\wolframclient\\\
+\\utils\\\\externalevaluate.py\"", 
+                    RGBColor[0.25, 0.48, 1], Small, FontFamily -> "Courier", 
+                    StripOnInput -> False], ButtonFunction :> If[
+                    FileExistsQ[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py"], 
+                    SystemOpen[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py"]], Appearance -> "Frameless", 
+                    Evaluator -> Automatic, Method -> "Preemptive"], 
+                    "\" in \"", "\"evaluate_message\""}, "RowDefault"]}, {"", 
+                    PaneBox[
+                    TagBox[
+                    GridBox[{{
+                    TagBox[
+                    
+                    GridBox[{{"\" 154.          else:\""}, {
+                    
+                    "\" 155.              func = \
+execute_from_string(function, context)\""}, {
+                    "\" 156.          #get the full argument types (possibly \
+calling a serialization function if necessary)\""}, {
+                    "\" 157.          #finally call the function and assign \
+the output\""}, {"\" 158.          return func(*args)\""}, {"\" 159.  \""}, {
+                    "\" 160.      if isinstance(input, \
+six.string_types):\""}, {
+                    ItemBox[
+                    "\" 161.          result = execute_from_string(input, \
+context)\"", Background -> RGBColor[1, 1, 0.85], StripOnInput -> False]}, {
+                    "\" 162.  \""}, {
+                    "\" 163.          if return_type == 'string':\""}, {
+                    "\" 164.              # bug 354267 repr returns a 'str' \
+even on py2 (i.e. bytes).\""}, {
+                    "\" 165.              return \
+force_text(repr(result))\""}, {"\" 166.  \""}, {
+                    "\" 167.          return result\""}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                    GridBoxBackground -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{
+                    GrayLevel[0.95], 
+                    GrayLevel[1]}}}, DefaultBaseStyle -> "Column", 
+                    GridBoxFrame -> {"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> 
+                    GrayLevel[0.85]}}, GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                    "Column"]}}, GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                    DefaultBaseStyle -> "Column", 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}], "Column"], ImageMargins -> 
+                    0]}}, GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                    AutoDelete -> False, GridBoxBackground -> {
+                    "Columns" -> {{Automatic}}}, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {"Columns" -> {{0.2}}, 
+                    "Rows" -> {{0.5}}}, BaselinePosition -> {1, 1}]}, 
+                    Dynamic[Typeset`var$$], Alignment -> Automatic, ImageSize -> 
+                    Automatic, ImageMargins -> 0, BaseStyle -> {}, 
+                    DefaultBaseStyle -> "OpenerView", BaselinePosition -> 
+                    Baseline], Deployed -> False, StripOnInput -> False], 
+                    OpenerView[{
+                    Row[{
+                    Button[
+                    Style[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py", 
+                    RGBColor[0.25, 0.48, 1], Small, FontFamily -> "Courier"], 
+                    If[
+                    FileExistsQ[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py"], 
+                    SystemOpen[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py"]], Appearance -> "Frameless"], 
+                    " in ", "evaluate_message"}], 
+                    Column[{
+                    
+                    Column[{" 154.          else:", 
+                    " 155.              func = execute_from_string(function, \
+context)", 
+                    " 156.          #get the full argument types (possibly \
+calling a serialization function if necessary)", 
+                    " 157.          #finally call the function and assign the \
+output", " 158.          return func(*args)", " 159.  ", 
+                    " 160.      if isinstance(input, six.string_types):", 
+                    Item[
+                    " 161.          result = execute_from_string(input, \
+context)", Background -> LightYellow], " 162.  ", 
+                    " 163.          if return_type == 'string':", 
+                    " 164.              # bug 354267 repr returns a 'str' \
+even on py2 (i.e. bytes).", 
+                    " 165.              return force_text(repr(result))", 
+                    " 166.  ", " 167.          return result"}, 
+                    Background -> {{
+                    GrayLevel[0.95], 
+                    GrayLevel[1]}}, Frame -> LightGray]}]}, False]], 
+                    DynamicModuleValues -> Automatic], Setting[#, {0}]& ]}, {
+                    TagBox[
+                    DynamicModuleBox[{Typeset`var$$ = True}, 
+                    InterpretationBox[
+                    StyleBox[
+                    PaneSelectorBox[{False -> GridBox[{{
+                    OpenerBox[
+                    Dynamic[Typeset`var$$], Appearance -> Automatic, Enabled -> 
+                    Automatic, AutoAction -> False, ContinuousAction -> 
+                    False], 
+                    TemplateBox[{
+                    ButtonBox[
+                    StyleBox[
+                    "\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\
+\\\\12.0\\\\SystemFiles\\\\Links\\\\WolframClientForPython\\\\wolframclient\\\
+\\utils\\\\externalevaluate.py\"", 
+                    RGBColor[0.25, 0.48, 1], Small, FontFamily -> "Courier", 
+                    StripOnInput -> False], ButtonFunction :> If[
+                    FileExistsQ[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py"], 
+                    SystemOpen[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py"]], Appearance -> "Frameless", 
+                    Evaluator -> Automatic, Method -> "Preemptive"], 
+                    "\" in \"", "\"execute_from_string\""}, "RowDefault"]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}}, AutoDelete -> 
+                    False, GridBoxBackground -> {"Columns" -> {{Automatic}}}, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {"Columns" -> {{0.2}}, 
+                    "Rows" -> {{0.5}}}, BaselinePosition -> {1, 1}], True -> 
+                    GridBox[{{
+                    OpenerBox[
+                    Dynamic[Typeset`var$$], Appearance -> Automatic, Enabled -> 
+                    Automatic, AutoAction -> False, ContinuousAction -> 
+                    False], 
+                    TemplateBox[{
+                    ButtonBox[
+                    StyleBox[
+                    "\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\
+\\\\12.0\\\\SystemFiles\\\\Links\\\\WolframClientForPython\\\\wolframclient\\\
+\\utils\\\\externalevaluate.py\"", 
+                    RGBColor[0.25, 0.48, 1], Small, FontFamily -> "Courier", 
+                    StripOnInput -> False], ButtonFunction :> If[
+                    FileExistsQ[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py"], 
+                    SystemOpen[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py"]], Appearance -> "Frameless", 
+                    Evaluator -> Automatic, Method -> "Preemptive"], 
+                    "\" in \"", "\"execute_from_string\""}, "RowDefault"]}, {
+                    "", 
+                    PaneBox[
+                    TagBox[
+                    GridBox[{{
+                    TagBox[
+                    
+                    GridBox[{{
+                    "\"  63.          result = expressions.pop(-1)\""}, {
+                    "\"  64.  \""}, {"\"  65.      if expressions:\""}, {
+                    "\"  66.          exec(compile(ast.Module(expressions), \
+'', 'exec'), current)\""}, {"\"  67.  \""}, {"\"  68.      if result:\""}, {
+                    "\"  69.          result = eval(\""}, {
+                    ItemBox[
+                    "\"  70.              \
+compile(ast.Expression(result.value), '', 'eval'), current)\"", Background -> 
+                    RGBColor[1, 1, 0.85], StripOnInput -> False]}, {
+                    "\"  71.      else:\""}, {
+                    "\"  72.          result = wl.Null\""}, {"\"  73.  \""}, {
+                    "\"  74.      if context is not None:\""}, {
+                    "\"  75.          context.update(current)\""}, {
+                    "\"  76.  \""}}, GridBoxAlignment -> {
+                    "Columns" -> {{Left}}}, GridBoxBackground -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{
+                    GrayLevel[0.95], 
+                    GrayLevel[1]}}}, DefaultBaseStyle -> "Column", 
+                    GridBoxFrame -> {"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> 
+                    GrayLevel[0.85]}}, GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                    "Column"]}}, GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                    DefaultBaseStyle -> "Column", 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}], "Column"], ImageMargins -> 
+                    0]}}, GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                    AutoDelete -> False, GridBoxBackground -> {
+                    "Columns" -> {{Automatic}}}, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {"Columns" -> {{0.2}}, 
+                    "Rows" -> {{0.5}}}, BaselinePosition -> {1, 1}]}, 
+                    Dynamic[Typeset`var$$], Alignment -> Automatic, ImageSize -> 
+                    Automatic, ImageMargins -> 0, BaseStyle -> {}, 
+                    DefaultBaseStyle -> "OpenerView", BaselinePosition -> 
+                    Baseline], Deployed -> False, StripOnInput -> False], 
+                    OpenerView[{
+                    Row[{
+                    Button[
+                    Style[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py", 
+                    RGBColor[0.25, 0.48, 1], Small, FontFamily -> "Courier"], 
+                    If[
+                    FileExistsQ[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py"], 
+                    SystemOpen[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py"]], Appearance -> "Frameless"], 
+                    " in ", "execute_from_string"}], 
+                    Column[{
+                    
+                    Column[{"  63.          result = expressions.pop(-1)", 
+                    "  64.  ", "  65.      if expressions:", 
+                    "  66.          exec(compile(ast.Module(expressions), '', \
+'exec'), current)", "  67.  ", "  68.      if result:", 
+                    "  69.          result = eval(", 
+                    Item[
+                    "  70.              compile(ast.Expression(result.value), \
+'', 'eval'), current)", Background -> LightYellow], "  71.      else:", 
+                    "  72.          result = wl.Null", "  73.  ", 
+                    "  74.      if context is not None:", 
+                    "  75.          context.update(current)", "  76.  "}, 
+                    Background -> {{
+                    GrayLevel[0.95], 
+                    GrayLevel[1]}}, Frame -> LightGray]}]}, True]], 
+                    DynamicModuleValues -> Automatic], Setting[#, {0}]& ]}, {
+                    TagBox[
+                    DynamicModuleBox[{Typeset`var$$ = True}, 
+                    InterpretationBox[
+                    StyleBox[
+                    PaneSelectorBox[{False -> GridBox[{{
+                    OpenerBox[
+                    Dynamic[Typeset`var$$], Appearance -> Automatic, Enabled -> 
+                    Automatic, AutoAction -> False, ContinuousAction -> 
+                    False], "\"<module>\""}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}}, AutoDelete -> 
+                    False, GridBoxBackground -> {"Columns" -> {{Automatic}}}, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {"Columns" -> {{0.2}}, 
+                    "Rows" -> {{0.5}}}, BaselinePosition -> {1, 1}], True -> 
+                    GridBox[{{
+                    OpenerBox[
+                    Dynamic[Typeset`var$$], Appearance -> Automatic, Enabled -> 
+                    Automatic, AutoAction -> False, ContinuousAction -> 
+                    False], "\"<module>\""}, {"", 
+                    PaneBox[
+                    TagBox[
+                    GridBox[{{
+                    TagBox[
+                    GridBox[{{
+                    ItemBox[
+                    "\"   1.  numpy.multiply(3.0,3.0)\"", Background -> 
+                    RGBColor[1, 1, 0.85], StripOnInput -> False]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                    GridBoxBackground -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{
+                    GrayLevel[0.95], 
+                    GrayLevel[1]}}}, DefaultBaseStyle -> "Column", 
+                    GridBoxFrame -> {"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> 
+                    GrayLevel[0.85]}}, GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                    "Column"]}, {"\"No local variables\""}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                    DefaultBaseStyle -> "Column", 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}], "Column"], ImageMargins -> 
+                    0]}}, GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                    AutoDelete -> False, GridBoxBackground -> {
+                    "Columns" -> {{Automatic}}}, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {"Columns" -> {{0.2}}, 
+                    "Rows" -> {{0.5}}}, BaselinePosition -> {1, 1}]}, 
+                    Dynamic[Typeset`var$$], Alignment -> Automatic, ImageSize -> 
+                    Automatic, ImageMargins -> 0, BaseStyle -> {}, 
+                    DefaultBaseStyle -> "OpenerView", BaselinePosition -> 
+                    Baseline], Deployed -> False, StripOnInput -> False], 
+                    OpenerView[{"<module>", 
+                    Column[{
+                    Column[{
+                    Item[
+                    "   1.  numpy.multiply(3.0,3.0)", Background -> 
+                    LightYellow]}, Background -> {{
+                    GrayLevel[0.95], 
+                    GrayLevel[1]}}, Frame -> LightGray], 
+                    "No local variables"}]}, True]], DynamicModuleValues -> 
+                    Automatic], Setting[#, {0}]& ]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                    DefaultBaseStyle -> "Column", 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                    "Column"], FontFamily -> "Courier", StripOnInput -> 
+                    False], ImageMargins -> 0]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}}, AutoDelete -> 
+                    False, GridBoxBackground -> {"Columns" -> {{Automatic}}}, 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {
+                    "Columns" -> {{0.2}}, "Rows" -> {{0.5}}}, 
+                    BaselinePosition -> {1, 1}]}, 
+                    Dynamic[Typeset`var$$], Alignment -> Automatic, ImageSize -> 
+                    Automatic, ImageMargins -> 0, BaseStyle -> {}, 
+                    DefaultBaseStyle -> "OpenerView", BaselinePosition -> 
+                    Baseline], Deployed -> False, StripOnInput -> False], 
+                    OpenerView[{
+                    Row[{"NameError", " ", "name 'numpy' is not defined"}], 
+                    Style[
+                    Column[{
+                    OpenerView[{
+                    Row[{
+                    Button[
+                    Style[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\language\\decorators.py", 
+                    RGBColor[0.25, 0.48, 1], Small, FontFamily -> "Courier"], 
+                    If[
+                    FileExistsQ[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\language\\decorators.py"], 
+                    SystemOpen[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\language\\decorators.py"]], Appearance -> "Frameless"], " in ",
+                     "safe_wl_execute"}], 
+                    Column[{
+                    
+                    Column[{"  24.                      opts={},", 
+                    "  25.                      export_opts={},", 
+                    "  26.                      \
+exception_class=WolframLanguageException):", "  27.  ", 
+                    "  28.      __traceback_hidden_variables__ = True", 
+                    "  29.  ", "  30.      try:", 
+                    Item[
+                    "  31.          return export(function(*args, **opts), \
+**export_opts)", Background -> LightYellow], 
+                    "  32.      except Exception as export_exception:", 
+                    "  33.          try:", "  34.              try:", 
+                    "  35.  ", 
+                    "  36.                  # The user can provide an \
+exception class, and it can be broken, in which case we are running another", 
+                    "  37.                  # try / except to return errors \
+that are happening during class serialization"}, Background -> {{
+                    GrayLevel[0.95], 
+                    GrayLevel[1]}}, Frame -> LightGray]}]}, False], 
+                    OpenerView[{
+                    Row[{
+                    Button[
+                    Style[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py", 
+                    RGBColor[0.25, 0.48, 1], Small, FontFamily -> "Courier"], 
+                    If[
+                    FileExistsQ[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py"], 
+                    SystemOpen[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py"]], Appearance -> "Frameless"], 
+                    " in ", "handle_message"}], 
+                    Column[{
+                    
+                    Column[{" 169.  ", " 170.  @to_wl(**EXPORT_KWARGS)", 
+                    " 171.  def handle_message(socket, \
+context=UnprintableContext()):", " 172.  ", 
+                    " 173.      __traceback_hidden_variables__ = True", 
+                    " 174.  ", 
+                    " 175.      message = binary_deserialize(socket.recv())", 
+                    Item[
+                    " 176.      result = evaluate_message(context=context, \
+**message)", Background -> LightYellow], " 177.  ", 
+                    " 178.      sys.stdout.flush()", 
+                    " 179.      return result", " 180.  ", " 181.  ", 
+                    " 182.  def start_zmq_instance(port=None, \
+write_to_stdout=True, **opts):"}, Background -> {{
+                    GrayLevel[0.95], 
+                    GrayLevel[1]}}, Frame -> LightGray]}]}, False], 
+                    OpenerView[{
+                    Row[{
+                    Button[
+                    Style[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py", 
+                    RGBColor[0.25, 0.48, 1], Small, FontFamily -> "Courier"], 
+                    If[
+                    FileExistsQ[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py"], 
+                    SystemOpen[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py"]], Appearance -> "Frameless"], 
+                    " in ", "evaluate_message"}], 
+                    Column[{
+                    
+                    Column[{" 154.          else:", 
+                    " 155.              func = execute_from_string(function, \
+context)", 
+                    " 156.          #get the full argument types (possibly \
+calling a serialization function if necessary)", 
+                    " 157.          #finally call the function and assign the \
+output", " 158.          return func(*args)", " 159.  ", 
+                    " 160.      if isinstance(input, six.string_types):", 
+                    Item[
+                    " 161.          result = execute_from_string(input, \
+context)", Background -> LightYellow], " 162.  ", 
+                    " 163.          if return_type == 'string':", 
+                    " 164.              # bug 354267 repr returns a 'str' \
+even on py2 (i.e. bytes).", 
+                    " 165.              return force_text(repr(result))", 
+                    " 166.  ", " 167.          return result"}, 
+                    Background -> {{
+                    GrayLevel[0.95], 
+                    GrayLevel[1]}}, Frame -> LightGray]}]}, False], 
+                    OpenerView[{
+                    Row[{
+                    Button[
+                    Style[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py", 
+                    RGBColor[0.25, 0.48, 1], Small, FontFamily -> "Courier"], 
+                    If[
+                    FileExistsQ[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py"], 
+                    SystemOpen[
+                    "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py"]], Appearance -> "Frameless"], 
+                    " in ", "execute_from_string"}], 
+                    Column[{
+                    
+                    Column[{"  63.          result = expressions.pop(-1)", 
+                    "  64.  ", "  65.      if expressions:", 
+                    "  66.          exec(compile(ast.Module(expressions), '', \
+'exec'), current)", "  67.  ", "  68.      if result:", 
+                    "  69.          result = eval(", 
+                    Item[
+                    "  70.              compile(ast.Expression(result.value), \
+'', 'eval'), current)", Background -> LightYellow], "  71.      else:", 
+                    "  72.          result = wl.Null", "  73.  ", 
+                    "  74.      if context is not None:", 
+                    "  75.          context.update(current)", "  76.  "}, 
+                    Background -> {{
+                    GrayLevel[0.95], 
+                    GrayLevel[1]}}, Frame -> LightGray]}]}, True], 
+                    OpenerView[{"<module>", 
+                    Column[{
+                    Column[{
+                    Item[
+                    "   1.  numpy.multiply(3.0,3.0)", Background -> 
+                    LightYellow]}, Background -> {{
+                    GrayLevel[0.95], 
+                    GrayLevel[1]}}, Frame -> LightGray], 
+                    "No local variables"}]}, True]}], FontFamily -> 
+                    "Courier"]}, True]], DynamicModuleValues -> Automatic], 
+                    Setting[#, {0}]& ], HoldForm], "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  Failure["PythonError", 
+   Association[
+   "MessageTemplate" :> "name 'numpy' is not defined", "MessageParameters" :> 
+    Association[], "FailureCode" :> "NameError", "Traceback" :> OpenerView[{
+       Row[{"NameError", " ", "name 'numpy' is not defined"}], 
+       Style[
+        Column[{
+          OpenerView[{
+            Row[{
+              Button[
+               Style[
+               "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\language\\decorators.py", 
+                RGBColor[0.25, 0.48, 1], Small, FontFamily -> "Courier"], 
+               If[
+                FileExistsQ[
+                "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\language\\decorators.py"], 
+                SystemOpen[
+                "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\language\\decorators.py"]], Appearance -> "Frameless"], " in ",
+               "safe_wl_execute"}], 
+            Column[{
+              
+              Column[{"  24.                      opts={},", 
+                "  25.                      export_opts={},", 
+                "  26.                      \
+exception_class=WolframLanguageException):", "  27.  ", 
+                "  28.      __traceback_hidden_variables__ = True", "  29.  ",
+                 "  30.      try:", 
+                Item[
+                "  31.          return export(function(*args, **opts), \
+**export_opts)", Background -> LightYellow], 
+                "  32.      except Exception as export_exception:", 
+                "  33.          try:", "  34.              try:", "  35.  ", 
+                "  36.                  # The user can provide an exception \
+class, and it can be broken, in which case we are running another", 
+                
+                "  37.                  # try / except to return errors that \
+are happening during class serialization"}, Background -> {{
+                  GrayLevel[0.95], 
+                  GrayLevel[1]}}, Frame -> LightGray]}]}, False], 
+          OpenerView[{
+            Row[{
+              Button[
+               Style[
+               "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py", 
+                RGBColor[0.25, 0.48, 1], Small, FontFamily -> "Courier"], 
+               If[
+                FileExistsQ[
+                "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py"], 
+                SystemOpen[
+                "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py"]], Appearance -> "Frameless"], 
+              " in ", "handle_message"}], 
+            Column[{
+              
+              Column[{" 169.  ", " 170.  @to_wl(**EXPORT_KWARGS)", 
+                " 171.  def handle_message(socket, \
+context=UnprintableContext()):", " 172.  ", 
+                " 173.      __traceback_hidden_variables__ = True", " 174.  ",
+                 " 175.      message = binary_deserialize(socket.recv())", 
+                Item[
+                " 176.      result = evaluate_message(context=context, \
+**message)", Background -> LightYellow], " 177.  ", 
+                " 178.      sys.stdout.flush()", " 179.      return result", 
+                " 180.  ", " 181.  ", 
+                " 182.  def start_zmq_instance(port=None, \
+write_to_stdout=True, **opts):"}, Background -> {{
+                  GrayLevel[0.95], 
+                  GrayLevel[1]}}, Frame -> LightGray]}]}, False], 
+          OpenerView[{
+            Row[{
+              Button[
+               Style[
+               "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py", 
+                RGBColor[0.25, 0.48, 1], Small, FontFamily -> "Courier"], 
+               If[
+                FileExistsQ[
+                "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py"], 
+                SystemOpen[
+                "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py"]], Appearance -> "Frameless"], 
+              " in ", "evaluate_message"}], 
+            Column[{
+              
+              Column[{" 154.          else:", 
+                " 155.              func = execute_from_string(function, \
+context)", 
+                " 156.          #get the full argument types (possibly \
+calling a serialization function if necessary)", 
+                " 157.          #finally call the function and assign the \
+output", " 158.          return func(*args)", " 159.  ", 
+                " 160.      if isinstance(input, six.string_types):", 
+                Item[
+                " 161.          result = execute_from_string(input, context)",
+                  Background -> LightYellow], " 162.  ", 
+                " 163.          if return_type == 'string':", 
+                " 164.              # bug 354267 repr returns a 'str' even on \
+py2 (i.e. bytes).", " 165.              return force_text(repr(result))", 
+                " 166.  ", " 167.          return result"}, Background -> {{
+                  GrayLevel[0.95], 
+                  GrayLevel[1]}}, Frame -> LightGray]}]}, False], 
+          OpenerView[{
+            Row[{
+              Button[
+               Style[
+               "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py", 
+                RGBColor[0.25, 0.48, 1], Small, FontFamily -> "Courier"], 
+               If[
+                FileExistsQ[
+                "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py"], 
+                SystemOpen[
+                "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\12.0\\SystemFiles\\Links\\WolframClientForPython\\\
+wolframclient\\utils\\externalevaluate.py"]], Appearance -> "Frameless"], 
+              " in ", "execute_from_string"}], 
+            Column[{
+              
+              Column[{"  63.          result = expressions.pop(-1)", 
+                "  64.  ", "  65.      if expressions:", 
+                "  66.          exec(compile(ast.Module(expressions), '', \
+'exec'), current)", "  67.  ", "  68.      if result:", 
+                "  69.          result = eval(", 
+                Item[
+                "  70.              compile(ast.Expression(result.value), '', \
+'eval'), current)", Background -> LightYellow], "  71.      else:", 
+                "  72.          result = wl.Null", "  73.  ", 
+                "  74.      if context is not None:", 
+                "  75.          context.update(current)", "  76.  "}, 
+               Background -> {{
+                  GrayLevel[0.95], 
+                  GrayLevel[1]}}, Frame -> LightGray]}]}, True], 
+          OpenerView[{"<module>", 
+            Column[{
+              Column[{
+                Item[
+                "   1.  numpy.multiply(3.0,3.0)", Background -> LightYellow]},
+                Background -> {{
+                  GrayLevel[0.95], 
+                  GrayLevel[1]}}, Frame -> LightGray], 
+              "No local variables"}]}, True]}], FontFamily -> "Courier"]}, 
+      True]]],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.7874639874389496`*^9},
+ CellLabel->"Out[48]=",ExpressionUUID->"f348ba3b-29ad-483a-afe4-dc0e9d822df6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ExternalEvaluate", "[", 
+  RowBox[{"\"\<Python-NumPy\>\"", ",", "\"\<numpy.multiply(3.0,3.0)\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.78746395944617*^9, 3.787463970275667*^9}},
+ CellLabel->"In[47]:=",ExpressionUUID->"b449a297-c002-4183-9fc0-29cec62e9352"],
+
+Cell[BoxData["9.`"], "Output",
+ CellChangeTimes->{{3.787463962248721*^9, 3.7874639724501915`*^9}},
+ CellLabel->"Out[47]=",ExpressionUUID->"29207f49-4745-49ff-910f-9fc364e17123"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]],
 
@@ -230,23 +1372,30 @@ Cell[2581, 81, 145, 2, 28, "Input",ExpressionUUID->"0c519345-bc0e-4790-ae67-2847
 Cell[CellGroupData[{
 Cell[2763, 88, 164, 3, 53, "Subsection",ExpressionUUID->"c5f909fd-70f0-4379-8f23-6915ccf97fe3"],
 Cell[2930, 93, 406, 8, 86, "Input",ExpressionUUID->"9b233c1f-f96a-45e3-ac3c-10603371fa14"],
-Cell[3339, 103, 176, 3, 34, "Text",ExpressionUUID->"657473db-5f6c-4c4f-b204-290dd068195b"],
-Cell[3518, 108, 265, 5, 63, "ExternalLanguage",ExpressionUUID->"82d11c7b-6100-4e26-977a-057a87ac9225"],
-Cell[3786, 115, 234, 6, 34, "Text",ExpressionUUID->"d6b2f236-bdd0-46a3-9a0d-4dbcf31dd117"],
-Cell[4023, 123, 470, 11, 67, "Input",ExpressionUUID->"1e9d867a-7890-4449-8d7b-dbbd6e84fc7e"]
+Cell[3339, 103, 234, 6, 34, "Text",ExpressionUUID->"d6b2f236-bdd0-46a3-9a0d-4dbcf31dd117"],
+Cell[3576, 111, 470, 11, 67, "Input",ExpressionUUID->"1e9d867a-7890-4449-8d7b-dbbd6e84fc7e"],
+Cell[4049, 124, 297, 7, 34, "Text",ExpressionUUID->"657473db-5f6c-4c4f-b204-290dd068195b"],
+Cell[4349, 133, 265, 5, 63, "ExternalLanguage",ExpressionUUID->"82d11c7b-6100-4e26-977a-057a87ac9225"],
+Cell[4617, 140, 189, 3, 34, "Text",ExpressionUUID->"a8a0295e-8f2f-4c5a-810f-399af4d5961f"],
+Cell[CellGroupData[{
+Cell[4831, 147, 418, 10, 48, "Input",ExpressionUUID->"6cbd0608-1398-4a7d-8050-0169c11beeea"],
+Cell[5252, 159, 58910, 1102, 71, "Output",ExpressionUUID->"f348ba3b-29ad-483a-afe4-dc0e9d822df6"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[64199, 1266, 288, 5, 28, "Input",ExpressionUUID->"b449a297-c002-4183-9fc0-29cec62e9352"],
+Cell[64490, 1273, 177, 2, 32, "Output",ExpressionUUID->"29207f49-4745-49ff-910f-9fc364e17123"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4542, 140, 161, 3, 67, "Section",ExpressionUUID->"d7afb2bb-309d-4c7d-9996-73277a390f4d"],
-Cell[4706, 145, 355, 7, 56, "Text",ExpressionUUID->"e6d5e554-7a6e-4386-b6ff-c2bd86345ba9"],
-Cell[5064, 154, 1130, 30, 86, "Input",ExpressionUUID->"f6a32e9c-5c49-475f-a3f4-d95ef1e737d1"],
-Cell[6197, 186, 217, 4, 34, "Text",ExpressionUUID->"4e4fe70d-5bf3-4431-9b6b-ee44ad192c51"],
-Cell[6417, 192, 218, 4, 28, "Input",ExpressionUUID->"db368ac5-2a69-4a3b-b7e9-8cd17c582ad2"]
+Cell[64728, 1282, 161, 3, 67, "Section",ExpressionUUID->"d7afb2bb-309d-4c7d-9996-73277a390f4d"],
+Cell[64892, 1287, 355, 7, 56, "Text",ExpressionUUID->"e6d5e554-7a6e-4386-b6ff-c2bd86345ba9"],
+Cell[65250, 1296, 1130, 30, 86, "Input",ExpressionUUID->"f6a32e9c-5c49-475f-a3f4-d95ef1e737d1"],
+Cell[66383, 1328, 217, 4, 34, "Text",ExpressionUUID->"4e4fe70d-5bf3-4431-9b6b-ee44ad192c51"],
+Cell[66603, 1334, 218, 4, 28, "Input",ExpressionUUID->"db368ac5-2a69-4a3b-b7e9-8cd17c582ad2"]
 }, Open  ]]
 }, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
