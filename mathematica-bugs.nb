@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     38198,       1031]
-NotebookOptionsPosition[     36076,        984]
-NotebookOutlinePosition[     36418,        999]
-CellTagsIndexPosition[     36375,        996]
+NotebookDataLength[     41671,       1123]
+NotebookOptionsPosition[     39006,       1067]
+NotebookOutlinePosition[     39347,       1082]
+CellTagsIndexPosition[     39304,       1079]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -979,11 +979,94 @@ Cell[BoxData[
   "Out[265]=",ExpressionUUID->"30a7bede-3969-45aa-8701-ee72d6392132"]
 }, Open  ]]
 }, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem with TimeSeries", "Chapter",
+ CellChangeTimes->{{3.7946079061210055`*^9, 
+  3.7946079125456333`*^9}},ExpressionUUID->"c7a54922-8370-4a00-a0de-\
+c79fb7044e46"],
+
+Cell[CellGroupData[{
+
+Cell["Unrecognized timezone", "Section",
+ CellChangeTimes->{{3.794607916024551*^9, 
+  3.794607920540249*^9}},ExpressionUUID->"b2df5654-c73b-408d-91aa-\
+ad735e312290"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"$TimeZone", "=", 
+   TemplateBox[{"\"America/Phoenix\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"TimeZone\"", ",", "\"America/Phoenix\""}], "]"}],
+     "\"Entity[\\\"TimeZone\\\", \\\"America/Phoenix\\\"]\"","\"time zone\""},
+    "Entity"]}], ";"}]], "Input",
+ CellChangeTimes->{{3.794607927559447*^9, 
+  3.7946079324821167`*^9}},ExpressionUUID->"cd2460d2-e366-4551-961f-\
+d05be8a565f1"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"data", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       TemplateBox[{RowBox[{"\"Wed 1 Apr 2015 05:48:00\"", 
+           StyleBox["\"MST\"", FontColor -> GrayLevel[0.5]]}],
+         RowBox[{"DateObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               
+               RowBox[{
+                "2015", ",", "4", ",", "1", ",", "5", ",", "48", ",", "0.`"}],
+                "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", ",", 
+             "\"America/Phoenix\""}], "]"}]},
+        "DateObject",
+        Editable->False], ",", "6."}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       TemplateBox[{RowBox[{"\"Wed 1 Apr 2015 05:49:00\"", 
+           StyleBox["\"MST\"", FontColor -> GrayLevel[0.5]]}],
+         RowBox[{"DateObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               
+               RowBox[{
+                "2015", ",", "4", ",", "1", ",", "5", ",", "49", ",", "0.`"}],
+                "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", ",", 
+             "\"America/Phoenix\""}], "]"}]},
+        "DateObject",
+        Editable->False], ",", "7."}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       TemplateBox[{RowBox[{"\"Wed 1 Apr 2015 05:50:00\"", 
+           StyleBox["\"MST\"", FontColor -> GrayLevel[0.5]]}],
+         RowBox[{"DateObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               
+               RowBox[{
+                "2015", ",", "4", ",", "1", ",", "5", ",", "50", ",", "0.`"}],
+                "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", ",", 
+             "\"America/Phoenix\""}], "]"}]},
+        "DateObject",
+        Editable->False], ",", "8."}], "}"}]}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.7946079513018236`*^9, 3.794607965491643*^9}},
+ CellLabel->"In[53]:=",ExpressionUUID->"b9b34624-34a1-48ca-96eb-0b816e40063b"],
+
+Cell[BoxData[
+ RowBox[{"TimeSeries", "@", "data"}]], "Input",
+ CellChangeTimes->{{3.794607972632206*^9, 
+  3.794607975499319*^9}},ExpressionUUID->"2b94fa4b-fe10-4ecd-a534-\
+ad61d884c304"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{958, 988},
-WindowMargins->{{70, Automatic}, {Automatic, 35}},
+WindowSize->{958, 805},
+WindowMargins->{{62, Automatic}, {Automatic, 9}},
 FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
@@ -1030,6 +1113,15 @@ Cell[CellGroupData[{
 Cell[33973, 921, 242, 5, 28, "Input",ExpressionUUID->"b2fd4e38-727a-444e-893e-0729e0bbb14e"],
 Cell[34218, 928, 1806, 50, 413, "Output",ExpressionUUID->"30a7bede-3969-45aa-8701-ee72d6392132"]
 }, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36085, 985, 172, 3, 67, "Chapter",ExpressionUUID->"c7a54922-8370-4a00-a0de-c79fb7044e46"],
+Cell[CellGroupData[{
+Cell[36282, 992, 166, 3, 67, "Section",ExpressionUUID->"b2df5654-c73b-408d-91aa-ad735e312290"],
+Cell[36451, 997, 423, 9, 41, "Input",ExpressionUUID->"cd2460d2-e366-4551-961f-d05be8a565f1"],
+Cell[36877, 1008, 1899, 48, 40, "Input",ExpressionUUID->"b9b34624-34a1-48ca-96eb-0b816e40063b"],
+Cell[38779, 1058, 187, 4, 28, "Input",ExpressionUUID->"2b94fa4b-fe10-4ecd-a534-ad61d884c304"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
